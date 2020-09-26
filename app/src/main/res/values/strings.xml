@@ -1,25 +1,3 @@
 <resources>
-    <!--Strings for the start layout-->
-    <string name="app_name">Ama Life Simulator</string>
-    <string name="first_name_text_view">First name:</string>
-    <string name="last_name_text_view">Last name:</string>
-    <string name="first_name_text_field">Enter the first name</string>
-    <string name="last_name_text_field">Enter the last name</string>
-    <string name="maleRadioButton">Male</string>
-    <string name="femaleRadioButton">Female</string>
-    <string name="start_life_button">Start a new life!</string>
 
-    <!--Strings for the main layout-->
-    <string name="liveOneYearButton">Live 1 Year</string>
-    <string name="nameTextView">Name:</string>
-    <string name="ageTextView">Age:</string>
-    <string name="activitiesButton">Activities</string>
-    <string name="moneyTextView">Money:</string>
-
-    <!--Strings for the main activity-->
-    <string name="educationAlertTitle">Level of education</string>
-    <string name="elementarySchoolAlertTitle">You have started Elementary School!</string>
-    <string name="middleSchoolAlertTitle">You have started Middle School!</string>
-    <string name="highSchoolAlertTitle">You have started High School!</string>
-    <string name="educationAlertPositiveButtonText" translatable="false">OK!</string>
 </resources>
