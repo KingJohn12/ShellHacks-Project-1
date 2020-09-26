@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.FocusFinder;
 import android.view.View;
 import android.view.Window;
 import android.widget.EditText;
@@ -34,7 +35,7 @@ public class FirstActivity extends AppCompatActivity {
     }
 
 
-    public void onNextButtonFirst (View view) {
+    public void onNextButtonFlipper (View view) {
         viewFlipper.showNext();
     }
 
@@ -62,38 +63,42 @@ public class FirstActivity extends AppCompatActivity {
     }
 
     public void onNextButtonSecond (View view) {
-        EditText firstNameEditText = findViewById(R.id.firstNameEditText);
-        EditText lastNameEditText = findViewById(R.id.lastNameEditText);
+        final EditText firstNameEditText = findViewById(R.id.firstNameEditText);
+        final EditText lastNameEditText = findViewById(R.id.lastNameEditText);
 
         firstNameEditText.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
             public void onFocusChange(View view, boolean b) {
-                if ()
+                if (!b) {
+                    firstName = firstNameEditText.getText().toString();
+                }
             }
         });
 
-        lastNameEditText.addTextChangedListener(new TextWatcher() {
+        lastNameEditText.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {}
-
-            @Override
-            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {}
-
-            @Override
-            public void afterTextChanged(Editable editable) {
-                lastName = lastNameEditText.getText().toString();
+            public void onFocusChange(View view, boolean b) {
+                if (!b) {
+                    lastName = lastNameEditText.getText().toString();
+                }
             }
         });
 
-        viewFlipper.showNext();
-    }
-
-    public void onNextButtonThird (View view) {
         viewFlipper.showNext();
 
         TextView helloTextView = findViewById(R.id.helloTextView);
 
         String temp = "Hello " + firstName + " " + lastName + "!";
         helloTextView.setText(temp);
+    }
+
+    public void onNextButtonFourth (View view) {
+        viewFlipper.showNext();
+//        Intent intent = new Intent(this, MainActivity.class);
+//
+//        intent.putExtra("firstName", firstName);
+//        intent.putExtra("lastName", lastName);
+//        intent.putExtra("choice", choice);
+//        startActivity(intent);
     }
 }

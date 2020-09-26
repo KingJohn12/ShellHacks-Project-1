@@ -27,7 +27,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="64dp"
-            android:onClick="onNextButtonFirst"
+            android:onClick="onNextButtonFlipper"
             android:text="Next"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -94,7 +94,7 @@
             app:layout_constraintStart_toStartOf="@+id/firstNameEditText"
             app:layout_constraintTop_toBottomOf="@+id/firstNameEditText" />
 
-        <RadioGroup
+        <in.daemondhruv.customviewgroup.ConstraintRadioGroup
             android:id="@+id/personChoiceRadioGroup"
             android:layout_width="0dp"
             android:layout_height="330dp"
@@ -108,41 +108,58 @@
 
             <RadioButton
                 android:id="@+id/firstPersonRadioButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="144dp"
+                android:layout_height="144dp"
                 android:layout_gravity="top|left"
+                android:layout_marginStart="72dp"
                 android:background="@mipmap/ic_launcher"
                 android:button="@null"
-                android:onClick="onRadioButtonClicked" />
+                android:onClick="onRadioButtonClicked"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/secondPersonRadioButton"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <RadioButton
                 android:id="@+id/secondPersonRadioButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="144dp"
+                android:layout_height="144dp"
                 android:layout_gravity="center_vertical|left"
                 android:background="@mipmap/ic_launcher"
                 android:button="@null"
-                android:onClick="onRadioButtonClicked" />
+                android:onClick="onRadioButtonClicked"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <RadioButton
                 android:id="@+id/thirdPersonRadioButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="144dp"
+                android:layout_height="144dp"
                 android:layout_gravity="center_horizontal|right"
+                android:layout_marginTop="48dp"
                 android:background="@mipmap/ic_launcher"
                 android:button="@null"
-                android:onClick="onRadioButtonClicked" />
+                android:onClick="onRadioButtonClicked"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/secondPersonRadioButton" />
 
             <RadioButton
                 android:id="@+id/fourthPersonRadioButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="144dp"
+                android:layout_height="144dp"
                 android:layout_gravity="bottom|center_horizontal"
+                android:layout_marginStart="72dp"
+                android:layout_marginTop="48dp"
                 android:background="@mipmap/ic_launcher"
                 android:button="@null"
-                android:onClick="onRadioButtonClicked" />
+                android:onClick="onRadioButtonClicked"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/thirdPersonRadioButton"
+                app:layout_constraintTop_toBottomOf="@+id/firstPersonRadioButton" />
 
-        </RadioGroup>
+        </in.daemondhruv.customviewgroup.ConstraintRadioGroup>
 
         <Button
             android:id="@+id/nextButtonSecond"
@@ -198,10 +215,59 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="24dp"
-            android:onClick="onNextButtonThird"
+            android:onClick="onNextButtonFlipper"
             android:text="Next"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/nextButtonFourth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:onClick="onNextButtonFourth"
+            android:text="Next"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/congratulationsTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Congratulations!"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/acceptanceTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="You have been accepted to Kingsley University"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/congratulationsTextView" />
+
+        <ImageView
+            android:id="@+id/acceptedImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="64dp"
+            app:layout_constraintBottom_toTopOf="@+id/nextButtonFourth"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/accepted" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ViewFlipper>
