@@ -94,11 +94,11 @@ public class FirstActivity extends AppCompatActivity {
 
     public void onNextButtonFourth (View view) {
         viewFlipper.showNext();
-//        Intent intent = new Intent(this, MainActivity.class);
-//
-//        intent.putExtra("firstName", firstName);
-//        intent.putExtra("lastName", lastName);
-//        intent.putExtra("choice", choice);
-//        startActivity(intent);
+        Intent intent = new Intent(this, MainActivity.class);
+
+        intent.putExtra("firstName", firstName);
+        intent.putExtra("lastName", lastName);
+        intent.putExtra("choice", choice);
+        startActivity(intent);
     }
 }

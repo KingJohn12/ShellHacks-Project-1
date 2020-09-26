@@ -124,7 +124,6 @@
                 android:id="@+id/secondPersonRadioButton"
                 android:layout_width="144dp"
                 android:layout_height="144dp"
-                android:layout_gravity="center_vertical|left"
                 android:background="@mipmap/ic_launcher"
                 android:button="@null"
                 android:onClick="onRadioButtonClicked"
