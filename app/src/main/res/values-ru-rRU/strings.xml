@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Strings for the start layout-->
+    <string name="app_name">Ama Life Simulator</string>
+    <string name="first_name_text_view">Имя:</string>
+    <string name="last_name_text_view">Фамилия:</string>
+    <string name="first_name_text_field">Введите имя</string>
+    <string name="last_name_text_field">Введите фамилию</string>
+    <string name="start_life_button">Начать новую жизнь!</string>
+
+    <!--Strings for the main layout-->
+    <string name="liveOneYearButton">Прожить 1 год</string>
+    <string name="nameTextView">Имя:</string>
+    <string name="ageTextView">Возраст:</string>
+    <string name="activitiesButton">Занятия</string>
+    <string name="moneyTextView">Деньги:</string>
+    <string name="educationAlertTitle">Уровень образования</string>
+    <string name="elementarySchoolAlertTitle">Вы начали учиться в начальной школе!</string>
+    <string name="middleSchoolAlertTitle">Вы начали учиться в средней школе!</string>
+    <string name="highSchoolAlertTitle">Вы начали учиться в старшей школе!</string>
+</resources>
